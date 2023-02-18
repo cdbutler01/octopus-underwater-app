@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: octopus-underwater-app
-          image: 720766170633.dkr.ecr.us-east-2.amazonaws.com/octopus-underwater-app:latest
+          image: amazonaws.com/kubernetes-github-actions
           ports:
             - containerPort: 80
               protocol: TCP
