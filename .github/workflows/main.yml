@@ -54,7 +54,7 @@ jobs:
         sudo mv kubectl /usr/local/bin/
         echo ${{ secrets.KUBECONFIG }} | base64 --decode > kubeconfig.yaml
     
-    - name: Deploy
+    - name: Deploy2
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
