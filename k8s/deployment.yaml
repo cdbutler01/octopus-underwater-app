@@ -6,6 +6,8 @@ metadata:
   labels:
     app: octopus-underwater-app
   namespace: octopus
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname=octopus.cbutler.com
 spec:
   selector:
     matchLabels:
