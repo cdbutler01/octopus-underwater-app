@@ -46,10 +46,11 @@ jobs:
     - name: Install and configure kubectl
       run: |
         VERSION=$(curl --silent https://storage.googleapis.com/kubernetes-release/release/stable.txt)
-        curl https://storage.googleapis.com/kubernetes-release/release/$VERSION/bin/linux/amd64/kubectl \
-          --progress-bar \
-          --location \
-          --remote-name
+        #curl https://storage.googleapis.com/kubernetes-release/release/$VERSION/bin/linux/amd64/kubectl \
+        #  --progress-bar \
+        #  --location \
+        #  --remote-name
+        curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.16/2023-01-30/bin/linux/amd64/kubectl
         chmod +x kubectl
         sudo mv kubectl /usr/local/bin/
         echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml 2>&1
