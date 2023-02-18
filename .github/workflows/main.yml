@@ -52,7 +52,7 @@ jobs:
           --remote-name
         chmod +x kubectl
         sudo mv kubectl /usr/local/bin/
-        echo ${{ secrets.KUBECONFIG }} > kubeconfig.yaml 2>&1
+        echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml 2>&1
     
     - name: Deploy2
       env:
