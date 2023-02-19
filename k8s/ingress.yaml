@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "octopus.goevrgrn.com"
+  - host: "octopus.evrgrncloud.com"
     http:
       paths:
         - pathType: Prefix
